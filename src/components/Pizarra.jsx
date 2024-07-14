@@ -1,5 +1,5 @@
 import { Nota } from "./Nota";
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
 export function Pizarra() {
@@ -55,6 +55,24 @@ export function Pizarra() {
         }
     ])
 
+    const tituloRef = useRef(); 
+    const descripcionRef = useRef(); 
+    const importanciaRef = useRef(); 
+
+    function agregarNota() {
+        const titulo = tituloRef.current.value;
+        const descripcion = descripcionRef.current.value;
+        const importancia = importanciaRef.current.checked;
+
+        const newNota = {
+            id:uuid(),
+            titulo:titulo,
+            descripcion:descripcion,
+            importancia:importancia
+        }
+        setNotas([...listaNotas,newNota])
+    }
+
     function updateNotas(id) {
         const eliminar = listaNotas.find(n=>n.id === id);
         const newList = [...listaNotas];
@@ -66,13 +84,13 @@ export function Pizarra() {
       <div>
         <h1 className="H1">Post It Simulator!</h1>
         <div className="formulario">
-          <input type="text" className="form-control inpt1" placeholder="Titulo" />
-          <input type="text" className="form-control inpt2" placeholder="Descripcion" />
+          <input ref={tituloRef} type="text" className="form-control inpt1" placeholder="Titulo" />
+          <input ref={descripcionRef} type="text" className="form-control inpt2" placeholder="Descripcion" />
           <div className="casilla">
-            <input type="checkbox"/>
+            <input ref={importanciaRef} type="checkbox"/>
             <label>Importante!</label>
           </div>
-          <button className="btn gris">Agregar</button>
+          <button onClick={agregarNota} className="btn gris">Agregar</button>
         </div>
       </div>
       <div className="contenedor-flex">

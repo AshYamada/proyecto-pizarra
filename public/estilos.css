@@ -69,14 +69,14 @@
 .contenedor-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    margin-top: 1em;
 }
 
 /* Nota */
 
 .nota {
     position: relative;
-    padding: 0.5em;
+    padding: 0.5em 0.8em;
     width: 22%;
     margin: 1%;
     min-height: 200px;
