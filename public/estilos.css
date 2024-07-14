@@ -16,6 +16,54 @@
     background-color: #111;
 }
 
+/* Titulo */
+
+.H1 {
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+/* Formulario */
+
+.formulario {
+    display: flex;
+    height: 2em;
+    justify-content: space-between;
+}
+
+.inpt1 {
+    border-radius: 4px;
+    width: 300px;
+}
+
+.inpt2 {
+    border-radius: 4px;
+    width: 450px;
+}
+
+.casilla {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.casilla input {
+    margin-right: 5px;
+}
+
+.formulario button {
+    border-radius: 4px;
+    color: #fff;
+    width: 200px;
+    padding: 0;
+}
+
+.formulario button:hover {
+    color: #fff;
+    outline: 1px solid #fff;
+    background-color: #111;
+}
+
 /* Pizarra */
 
 .contenedor-flex {
@@ -27,12 +75,30 @@
 /* Nota */
 
 .nota {
-    padding: 1em;
-    width: 20%;
+    position: relative;
+    padding: 0.5em;
+    width: 22%;
     margin: 1%;
     min-height: 200px;
 }
 
-.nota .titulo {
+.titulo {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.4em;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+.nota .X {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+}
+
+.descripcion {
+    word-wrap: break-word;
+    font-family: cursive;
     font-weight: bold;
 }
