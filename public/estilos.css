@@ -107,3 +107,27 @@
     font-family: cursive;
     font-weight: bold;
 }
+
+.rotar1 {
+    rotate: 2deg;
+}
+
+.rotar2 {
+    rotate: 4deg
+}
+
+.rotar3 {
+    rotate: 6deg;
+}
+
+.rotar4 {
+    rotate: -2deg
+}
+
+.rotar5 {
+    rotate: -4deg;
+}
+
+.rotar6 {
+    rotate: -6deg
+}
