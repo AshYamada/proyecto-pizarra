@@ -64,6 +64,11 @@
     background-color: #111;
 }
 
+.errorDescripcion {
+    padding: 5px;
+    text-align: center;
+}
+
 /* Pizarra */
 
 .contenedor-flex {
