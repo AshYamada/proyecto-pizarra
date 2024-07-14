@@ -1,3 +1,8 @@
+/* Grupo:
+    - Ariel Lagos
+    - Francisco Lagos
+*/
+
 export function Nota({ nota, updateNotas }) {
   const { id, titulo, descripcion, importancia } = nota;
   let clase = "";

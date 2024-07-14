@@ -1,3 +1,8 @@
+/* Grupo:
+    - Ariel Lagos
+    - Francisco Lagos
+*/
+
 import { Nota } from "./Nota";
 import { useRef, useState } from "react";
 import { v4 as uuid } from "uuid";
